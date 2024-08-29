@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../custom css/ProductList.css";
+import "../customcss/ProductList.css";
 import { useDispatch, useSelector } from "react-redux";
 import { fetch_products } from "../../State Management/shopingSlice";
 import RenderAllProduct from "./RenderAllProduct";

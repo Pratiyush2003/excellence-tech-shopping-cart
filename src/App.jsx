@@ -6,6 +6,7 @@ import HomePage from "./Components/pages/HomePage";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import CartPage from "./Components/pages/CartPage";
 import ViewSingleProduct from "./Components/products/ViewSingleProduct";
+import './App.css'
 
 const App = () => {
   return (

@@ -1,0 +1,27 @@
+/* Center the form container */
+.search-form {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+/* Center the input within the form */
+.search-input {
+  min-width: 150px;
+  transition: width 0.3s ease;
+}
+
+
+@media (min-width: 951px) {
+  .search-input {
+    min-width: 400px;
+  }
+}
+
+/* On small screens */
+@media (max-width: 950px) {
+  .search-input {
+    flex-grow: 1;
+    /* width: auto; Adjust to fit content */
+  }
+}
