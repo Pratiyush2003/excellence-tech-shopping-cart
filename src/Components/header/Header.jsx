@@ -11,7 +11,7 @@ const Header = () => {
 
   function logout(){
     localStorage.removeItem('mylogintoken');
-    navigate('/')
+    navigate('/login')
   }
 
   useEffect(() => {
@@ -77,10 +77,10 @@ const Header = () => {
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
               />
-              <button className="btn btn-outline-dark" type="button">
+              <button className="btn btn-outline-dark mx-2" type="button">
                   Cart-{(`${cart.length}`)}
               </button>
-              <button className="btn btn-outline-dark" type="button" onClick={() => logout}>
+              <button className="btn btn-outline-dark" type="button" onClick={logout}>
                   Logout
               </button>
             </form>
