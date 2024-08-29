@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { searchProduct } from "../../State Management/shopingSlice";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -7,6 +7,12 @@ const Header = () => {
   const [search, setSearch] = useState("");
   const dispatch = useDispatch();
   const {cart} = useSelector((state) => state.app)
+  const navigate = useNavigate();
+
+  function logout(){
+    localStorage.removeItem('mylogintoken');
+    navigate('/')
+  }
 
   useEffect(() => {
     dispatch(searchProduct(search));
@@ -73,6 +79,9 @@ const Header = () => {
               />
               <button className="btn btn-outline-dark" type="button">
                   Cart-{(`${cart.length}`)}
+              </button>
+              <button className="btn btn-outline-dark" type="button" onClick={() => logout}>
+                  Logout
               </button>
             </form>
           </div>

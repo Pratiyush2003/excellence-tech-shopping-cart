@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const LoginComponent = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const loginHandler = async (e) => {
     e.preventDefault();
@@ -14,8 +15,11 @@ const LoginComponent = () => {
     });
     const signupdata = await res.json();
     localStorage.setItem("mylogintoken", signupdata.token)
+    navigate('/')
+    setPassword("")
+    setUsername("")
   }
-  
+
   return (
     <>
       <div className="d-flex align-items-center justify-content-center vh-100">
