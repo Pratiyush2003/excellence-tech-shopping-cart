@@ -153,11 +153,11 @@ const Header = () => {
             </ul>
 
             <form
-              className="d-flex search-form mx-auto mx-4 fs-6 my-1"
+              className="d-flex js-search-form mx-auto mx-4 fs-6 my-1"
               role="search"
             >
               <input
-                className="form-control search-input mx-2"
+                className="form-control js-search-input mx-2 js-form-input"
                 type="search"
                 placeholder="Search"
                 aria-label="Search"
